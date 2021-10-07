@@ -1,29 +1,28 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
-  "version": "${version}",
+  "id": "testmod",
+  "version": "1.0.0",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Test Mod",
+  "description": "For personal use to learn modding with fabric",
   "authors": [
-    "Me!"
+    "TechTheAwesome"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/TechTheAwesome/fabric-test",
+    "sources": "https://github.com/TechTheAwesome/fabric-test"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/testmod/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "nl.devv.tech.testmod.ModMain"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
   ],
 
   "depends": {
@@ -33,6 +32,5 @@
     "java": ">=16"
   },
   "suggests": {
-    "another-mod": "*"
   }
 }
