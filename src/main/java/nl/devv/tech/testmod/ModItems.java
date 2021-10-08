@@ -5,15 +5,15 @@ import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ModItems {
     public static final Item WRENCH;
     public static final Item BRICK;
+    // public static final Item RESOURCE_TEST;
 
     private static Item register(String id, Item item) {
-        return Registry.register(Registry.ITEM, new Identifier(ModMain.ID, id), item);
+        return Registry.register(Registry.ITEM, ModMain.id(id), item);
     }
 
     private static Item register(Block block, ItemGroup group) {
@@ -23,6 +23,7 @@ public class ModItems {
     static {
         WRENCH = register("wrench", new Item(new FabricItemSettings().group(ModGroups.ITEM_GROUP)));
         BRICK = register(ModBlocks.BRICK, ModGroups.ITEM_GROUP);
+        // RESOURCE_TEST = register(ModBlocks.RESOURCE_TEST, ModGroups.ITEM_GROUP);
     }
 
     public static void initialize() {

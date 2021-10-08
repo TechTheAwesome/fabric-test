@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "testmod",
-  "version": "1.0.0",
+  "version": "${version}",
 
   "name": "Test Mod",
   "description": "For personal use to learn modding with fabric",
@@ -13,7 +13,7 @@
     "sources": "https://github.com/TechTheAwesome/fabric-test"
   },
 
-  "license": "CC0-1.0",
+  "license": "All rights reserved",
   "icon": "assets/testmod/icon.png",
 
   "environment": "*",
@@ -29,7 +29,8 @@
     "fabricloader": ">=0.11.3",
     "fabric": "*",
     "minecraft": "1.17.x",
-    "java": ">=16"
+    "java": ">=16",
+    "advanced_runtime_resource_pack": ">=0.4.4"
   },
   "suggests": {
   }
