@@ -6,7 +6,7 @@ import net.minecraft.block.Material;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-import nl.devv.tech.testmod.block.ResourceTestBlock;
+import nl.devv.tech.testmod.block.ResourceBlock;
 import nl.devv.tech.testmod.util.BlockGeneratable;
 
 public class ModBlocks {
@@ -26,7 +26,7 @@ public class ModBlocks {
 
     static {
         BRICK = register("brick", new Block(FabricBlockSettings.of(Material.METAL).strength(4F, 0.2F)));
-        RESOURCE_TEST = register("resource_test", new ResourceTestBlock(FabricBlockSettings.of(Material.METAL).strength(3F, 2F)));
+        RESOURCE_TEST = register("resource_test", new ResourceBlock(FabricBlockSettings.of(Material.METAL).strength(3F, 2F)));
     }
     public static void initialize() {
     }

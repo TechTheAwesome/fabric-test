@@ -6,15 +6,16 @@ import nl.devv.tech.testmod.util.BlockGeneratable;
 
 import static net.devtech.arrp.json.blockstate.JState.*;
 import net.devtech.arrp.json.blockstate.JState;
+import net.devtech.arrp.json.loot.JLootTable;
+
 import static net.devtech.arrp.json.models.JModel.*;
 
 import net.devtech.arrp.api.RuntimeResourcePack;
 
 import static net.devtech.arrp.json.lang.JLang.*;
 
-public class ResourceTestBlock extends BlockGeneratable {
-
-    public ResourceTestBlock(Settings settings) {
+public class ResourceBlock extends BlockGeneratable {
+    public ResourceBlock(Settings settings) {
         super(settings);
     }
 
@@ -42,8 +43,14 @@ public class ResourceTestBlock extends BlockGeneratable {
 
     @Override
     public void generateLootTable(RuntimeResourcePack pack, Identifier id) {
-        // TODO Auto-generated method stub
-
+        pack.addLootTable(id,
+			JLootTable.loot("minecraft:block")
+			.pool(JLootTable.pool()
+		    .rolls(1)
+			.entry(JLootTable.entry()
+			    .type("minecraft:item")
+			    .name(id.toString()))
+			    .condition(JLootTable.predicate("minecraft:survives_explosion"))));
     }
 
     @Override
