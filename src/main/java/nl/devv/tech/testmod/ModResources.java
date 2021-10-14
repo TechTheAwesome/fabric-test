@@ -4,7 +4,7 @@ import java.util.function.Consumer;
 
 import net.devtech.arrp.api.RuntimeResourcePack;
 
-public class ModResource {
+public class ModResources {
     private static Consumer<RuntimeResourcePack> server, client;
     
     public static RuntimeResourcePack initialize(String id) {
